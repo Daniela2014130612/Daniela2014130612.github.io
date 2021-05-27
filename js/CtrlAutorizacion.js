@@ -1,31 +1,15 @@
-"use strict";
-var forma = document.getElementById("forma"),
-        salidaBizcochos = document.getElementById("salidaBizcochos"),
-        salidaCelebridades = document.getElementById("salidaCelebridades"),
-        bizcochos = forma["bizcochos"],
-        celebridades = document.getElementsByName("celebridades");
-forma.addEventListener("change", validaBizcochos, false);
-forma.addEventListener("click", validaCelebridades, false);
-validaBizcochos();
-validaCelebridades();
-function validaBizcochos() {
-  var opciones = bizcochos.options, bizcochosSeleccionados = new Array(); 
-  for (var i = 0, total = opciones.length; i < total; i++) {
-    var bizcocho = opciones[i];
-    if (bizcocho.selected){
-      bizcochosSeleccionados.push(bizcocho.value);
-    }
-  }
-  salidaBizcochos.textContent = bizcochosSeleccionados.join(", ");
-}
-function validaCelebridades() {
-  var celebridadesSeleccionadas = new Array(); 
-  for (var i = 0, total = celebridades.length; i < total; i++) {
-    var celebridad = celebridades[i];
-    if (celebridad.checked){
-      celebridadesSeleccionadas.push(celebridad.value);
-    }
-  }
-  salidaCelebridades.textContent = celebridadesSeleccionadas.join(", ") + "."
-  + (celebridadesSeleccionadas.length === 3 ? "Autorizado" : "No Autorizado");
-}
+/*  Initializa Firebase con la configuración del proyecto. Revisa la
+ * configuración en tu servidor de Firebase.  */
+// @ts-ignore
+firebase.initializeApp({
+  apiKey: "AIzaSyCz50nLV4eZc47S8pqSCxSOaJROSJ7Ezg8",
+    authDomain: "fbwebauth41.firebaseapp.com",
+    projectId: "fbwebauth41",
+    storageBucket: "fbwebauth41.appspot.com",
+    messagingSenderId: "405306627572",
+    appId: "1:405306627572:web:a01e44d1801333eaa695a1",
+    measurementId: "G-XPRC00KTSR"
+  });
+
+
+
