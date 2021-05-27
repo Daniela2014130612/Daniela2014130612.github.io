@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Selección Múltiple</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+  </head>
+  <body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyC8oBCeaGxyrDejcfpIFtFO6Hg5TmsyGPU",
+    authDomain: "daniela2014130612.firebaseapp.com",
+    projectId: "daniela2014130612",
+    storageBucket: "daniela2014130612.appspot.com",
+    messagingSenderId: "731554894760",
+    appId: "1:731554894760:web:828ab2e16cd95fe2f7439d",
+    measurementId: "G-ERSNN4SEZN"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+    
+    <header>
+      <h1>Selección Múltiple</h1>
+    </header>
+    <form id="forma">
+      <p>
+        <label accesskey="B">
+          Bizcochos<br>
+          <select name="bizcochos" multiple>
+            <option value="dona">Dona</option>
+            <option value="concha" selected>Concha</option>
+            <option value="churro">Churro</option>
+            <option value="cuerno">Cuerno</option>
+            <option value="banderilla">Banderilla</option>
+            <option value="bolillo">Bolillo</option>
+          </select>
+        </label>
+        <br><output id="salidaBizcochos"></output>
+      </p>
+      <fieldset>
+        <legend>¿A quién pondrías en tu equipo? Selecciona 3.</legend>
+        <div>
+          <label>
+            <input type="checkbox" accesskey="S" name="celebridades"
+                   value="elvis">
+            Elvis Presley
+          </label>
+        <div>
+          <label>
+            <input type="checkbox" accesskey="L" name="celebridades"
+                   value="messi">
+            Lionel Messi
+          </label>
+        <div>
+          <label>
+            <input type="checkbox" accesskey="D" name="celebridades"
+                   value="brees">
+            Drew Brees
+          </label>
+        <div>
+          <label>
+            <input type="checkbox" accesskey="C" name="celebridades"
+                   value="cristiano">
+            Cristiano Ronaldo
+          </label>
+        <div>
+          <label>
+            <input type="checkbox" accesskey="R" name="celebridades"
+                   value="bigben">
+            BigBen
+          </label>
+        <div>
+          <label>
+            <input type="checkbox" accesskey="L" name="celebridades"
+                   value="luismiguel">
+            Luis Miguel
+          </label>
+        </div>
+      </fieldset>
+      <br><output id="salidaCelebridades"></output>
+   </form>
+    <footer>
+       Copyright 2021 Hernández Rojo Tania Daniela 
+    </footer>
+    <script src="js/CtrlAutorizacion.js"></script>
+  </body>
+</html>
